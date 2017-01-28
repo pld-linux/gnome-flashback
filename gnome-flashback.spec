@@ -1,24 +1,26 @@
 Summary:	GNOME Flashback module - GNOME 3 shell similar to GNOME 2
 Summary(pl.UTF-8):	Moduł GNOME Flashback - powłoka GNOME 3 podobna do GNOME 2
 Name:		gnome-flashback
-Version:	3.18.2
+Version:	3.22.0
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-flashback/3.18/%{name}-%{version}.tar.xz
-# Source0-md5:	5089c54e96d61cdb7a9c5c1f50662faf
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-flashback/3.22/%{name}-%{version}.tar.xz
+# Source0-md5:	f9cda74b82e0dd94762381daebc35982
 URL:		https://wiki.gnome.org/Projects/GnomeFlashback
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.13
 BuildRequires:	gettext-tools >= 0.19.4
-BuildRequires:	libtool >= 2:2
+BuildRequires:	gettext-tools >= 0.19.4
 BuildRequires:	glib2-devel >= 1:2.44.0
 BuildRequires:	gnome-bluetooth-devel >= 3.0
 BuildRequires:	gnome-desktop-devel >= 3.12.0
-BuildRequires:	gsettings-desktop-schemas-devel >= 3.12.0
-BuildRequires:	gtk+3-devel >= 3.15.2
+BuildRequires:	gsettings-desktop-schemas-devel >= 3.22.0
+BuildRequires:	gtk+3-devel >= 3.19.5
 BuildRequires:	ibus-devel >= 1.5.2
 BuildRequires:	libcanberra-gtk3-devel >= 0.13
+#BuildRequires:	libstatus-notifier-devel (repo no longer available?)
+BuildRequires:	libtool >= 2:2
 BuildRequires:	libxcb-devel
 BuildRequires:	pango-devel
 BuildRequires:	polkit-devel >= 0.97
@@ -36,7 +38,7 @@ Requires(post,postun):	glib2 >= 1:2.44.0
 Requires:	glib2 >= 1:2.44.0
 Requires:	gnome-bluetooth-libs >= 3.0
 Requires:	gnome-desktop >= 3.12.0
-Requires:	gtk+3 >= 3.15.0
+Requires:	gtk+3 >= 3.19.5
 Requires:	xorg-lib-libXrandr >= 1.5.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
