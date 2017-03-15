@@ -1,12 +1,12 @@
 Summary:	GNOME Flashback module - GNOME 3 shell similar to GNOME 2
 Summary(pl.UTF-8):	Moduł GNOME Flashback - powłoka GNOME 3 podobna do GNOME 2
 Name:		gnome-flashback
-Version:	3.22.0
+Version:	3.22.1
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-flashback/3.22/%{name}-%{version}.tar.xz
-# Source0-md5:	f9cda74b82e0dd94762381daebc35982
+# Source0-md5:	6a803c05e35aa779033295bffbb55f6f
 URL:		https://wiki.gnome.org/Projects/GnomeFlashback
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.13
