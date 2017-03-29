@@ -1,16 +1,16 @@
 Summary:	GNOME Flashback module - GNOME 3 shell similar to GNOME 2
 Summary(pl.UTF-8):	Moduł GNOME Flashback - powłoka GNOME 3 podobna do GNOME 2
 Name:		gnome-flashback
-Version:	3.22.1
+Version:	3.24.0
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-flashback/3.22/%{name}-%{version}.tar.xz
-# Source0-md5:	6a803c05e35aa779033295bffbb55f6f
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-flashback/3.24/%{name}-%{version}.tar.xz
+# Source0-md5:	9ad9ae60c1c610b7aed79b6f9030e8d2
 URL:		https://wiki.gnome.org/Projects/GnomeFlashback
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.13
-BuildRequires:	gettext-tools >= 0.19.4
+BuildRequires:	gdk-pixbuf2-devel >= 2.32.2
 BuildRequires:	gettext-tools >= 0.19.4
 BuildRequires:	glib2-devel >= 1:2.44.0
 BuildRequires:	gnome-bluetooth-devel >= 3.0
@@ -23,14 +23,15 @@ BuildRequires:	libcanberra-gtk3-devel >= 0.13
 BuildRequires:	libtool >= 2:2
 BuildRequires:	libxcb-devel
 BuildRequires:	pango-devel
-BuildRequires:	polkit-devel >= 0.97
 BuildRequires:	pkgconfig
+BuildRequires:	polkit-devel >= 0.97
 BuildRequires:	pulseaudio-devel
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	upower-devel >= 0.99.0
 BuildRequires:	xkeyboard-config
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXext-devel
+BuildRequires:	xorg-lib-libXi-devel >= 1.6.0
 BuildRequires:	xorg-lib-libXrandr-devel >= 1.5.0
 BuildRequires:	xorg-lib-libxkbfile-devel
 BuildRequires:	xz
@@ -99,6 +100,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/desktop-directories/X-GNOME-Flashback-Settings.directory
 %{_datadir}/desktop-directories/X-GNOME-Flashback-Settings-System.directory
 %{_datadir}/glib-2.0/schemas/org.gnome.gnome-flashback.gschema.xml
+%{_datadir}/glib-2.0/schemas/org.gnome.gnome-flashback.desktop-background.gschema.xml
+%{_datadir}/glib-2.0/schemas/org.gnome.gnome-flashback.input-sources.gschema.xml
+%{_datadir}/glib-2.0/schemas/org.gnome.gnome-flashback.workarounds.gschema.xml
 %{_datadir}/gnome-session/sessions/gnome-flashback-compiz.session
 %{_datadir}/gnome-session/sessions/gnome-flashback-metacity.session
 %{_datadir}/xsessions/gnome-flashback-compiz.desktop
