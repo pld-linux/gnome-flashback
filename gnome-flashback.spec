@@ -31,15 +31,21 @@ BuildRequires:	upower-devel >= 0.99.0
 BuildRequires:	xkeyboard-config
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXext-devel
+BuildRequires:	xorg-lib-libXfixes-devel
 BuildRequires:	xorg-lib-libXi-devel >= 1.6.0
 BuildRequires:	xorg-lib-libXrandr-devel >= 1.5.0
 BuildRequires:	xorg-lib-libxkbfile-devel
 BuildRequires:	xz
 Requires(post,postun):	glib2 >= 1:2.44.0
+Requires:	gdk-pixbuf2 >= 2.32.2
 Requires:	glib2 >= 1:2.44.0
 Requires:	gnome-bluetooth-libs >= 3.0
 Requires:	gnome-desktop >= 3.12.0
 Requires:	gtk+3 >= 3.19.5
+Requires:	ibus-libs >= 1.5.2
+Requires:	libcanberra-gtk3 >= 0.13
+Requires:	polkit >= 0.97
+Requires:	xorg-lib-libXi >= 1.6.0
 Requires:	xorg-lib-libXrandr >= 1.5.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
