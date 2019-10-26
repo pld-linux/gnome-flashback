@@ -1,12 +1,12 @@
 Summary:	GNOME Flashback module - GNOME 3 shell similar to GNOME 2
 Summary(pl.UTF-8):	Moduł GNOME Flashback - powłoka GNOME 3 podobna do GNOME 2
 Name:		gnome-flashback
-Version:	3.24.0
-Release:	2
+Version:	3.34.1
+Release:	1
 License:	GPL v3+
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-flashback/3.24/%{name}-%{version}.tar.xz
-# Source0-md5:	9ad9ae60c1c610b7aed79b6f9030e8d2
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-flashback/3.34/%{name}-%{version}.tar.xz
+# Source0-md5:	e328a51b69d97e291709458dfd8c0a1a
 URL:		https://wiki.gnome.org/Projects/GnomeFlashback
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.13
@@ -102,14 +102,17 @@ rm -rf $RPM_BUILD_ROOT
 /etc/xdg/autostart/gnome-flashback-screensaver.desktop
 /etc/xdg/menus/gnome-flashback-applications.menu
 %{_desktopdir}/gnome-flashback.desktop
-%{_desktopdir}/gnome-flashback-init.desktop
 %{_datadir}/desktop-directories/X-GNOME-Flashback-Settings.directory
 %{_datadir}/desktop-directories/X-GNOME-Flashback-Settings-System.directory
+%{_datadir}/glib-2.0/schemas/00_gnome-flashback.gschema.override
 %{_datadir}/glib-2.0/schemas/org.gnome.gnome-flashback.gschema.xml
 %{_datadir}/glib-2.0/schemas/org.gnome.gnome-flashback.desktop-background.gschema.xml
 %{_datadir}/glib-2.0/schemas/org.gnome.gnome-flashback.input-sources.gschema.xml
-%{_datadir}/glib-2.0/schemas/org.gnome.gnome-flashback.workarounds.gschema.xml
 %{_datadir}/gnome-session/sessions/gnome-flashback-compiz.session
 %{_datadir}/gnome-session/sessions/gnome-flashback-metacity.session
 %{_datadir}/xsessions/gnome-flashback-compiz.desktop
 %{_datadir}/xsessions/gnome-flashback-metacity.desktop
+%{systemduserunitdir}/gnome-flashback.service
+%{systemduserunitdir}/gnome-flashback.target
+%{systemduserunitdir}/gnome-session-x11@gnome-flashback-compiz.target
+%{systemduserunitdir}/gnome-session-x11@gnome-flashback-metacity.target
