@@ -1,12 +1,12 @@
 Summary:	GNOME Flashback module - GNOME 3 shell similar to GNOME 2
 Summary(pl.UTF-8):	Moduł GNOME Flashback - powłoka GNOME 3 podobna do GNOME 2
 Name:		gnome-flashback
-Version:	3.34.1
+Version:	3.34.2
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-flashback/3.34/%{name}-%{version}.tar.xz
-# Source0-md5:	e328a51b69d97e291709458dfd8c0a1a
+# Source0-md5:	251b51bad322c41d34d06fdb8f1799d4
 URL:		https://wiki.gnome.org/Projects/GnomeFlashback
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.13
@@ -15,8 +15,8 @@ BuildRequires:	gettext-tools >= 0.19.4
 BuildRequires:	glib2-devel >= 1:2.44.0
 BuildRequires:	gnome-bluetooth-devel >= 3.0
 BuildRequires:	gnome-desktop-devel >= 3.12.0
-BuildRequires:	gsettings-desktop-schemas-devel >= 3.22.0
-BuildRequires:	gtk+3-devel >= 3.19.5
+BuildRequires:	gsettings-desktop-schemas-devel >= 3.31.0
+BuildRequires:	gtk+3-devel >= 3.22.0
 BuildRequires:	ibus-devel >= 1.5.2
 BuildRequires:	libcanberra-gtk3-devel >= 0.13
 #BuildRequires:	libstatus-notifier-devel (repo no longer available?)
@@ -41,10 +41,12 @@ Requires:	gdk-pixbuf2 >= 2.32.2
 Requires:	glib2 >= 1:2.44.0
 Requires:	gnome-bluetooth-libs >= 3.0
 Requires:	gnome-desktop >= 3.12.0
-Requires:	gtk+3 >= 3.19.5
+Requires:	gsettings-desktop-schemas >= 3.31.0
+Requires:	gtk+3 >= 3.22.0
 Requires:	ibus-libs >= 1.5.2
 Requires:	libcanberra-gtk3 >= 0.13
 Requires:	polkit >= 0.97
+Requires:	upower-libs >= 0.99.0
 Requires:	xorg-lib-libXi >= 1.6.0
 Requires:	xorg-lib-libXrandr >= 1.5.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
