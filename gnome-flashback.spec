@@ -19,7 +19,6 @@ BuildRequires:	gsettings-desktop-schemas-devel >= 3.31.0
 BuildRequires:	gtk+3-devel >= 3.22.0
 BuildRequires:	ibus-devel >= 1.5.2
 BuildRequires:	libcanberra-gtk3-devel >= 0.13
-#BuildRequires:	libstatus-notifier-devel (repo no longer available?)
 BuildRequires:	libtool >= 2:2
 BuildRequires:	libxcb-devel
 BuildRequires:	pango-devel
