@@ -1,20 +1,22 @@
 Summary:	GNOME Flashback module - GNOME 3 shell similar to GNOME 2
 Summary(pl.UTF-8):	Moduł GNOME Flashback - powłoka GNOME 3 podobna do GNOME 2
 Name:		gnome-flashback
-Version:	3.34.2
+Version:	3.36.1
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-flashback/3.34/%{name}-%{version}.tar.xz
-# Source0-md5:	251b51bad322c41d34d06fdb8f1799d4
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-flashback/3.36/%{name}-%{version}.tar.xz
+# Source0-md5:	768ef0f776b5984dca15ca817a5297ff
 URL:		https://wiki.gnome.org/Projects/GnomeFlashback
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.13
 BuildRequires:	gdk-pixbuf2-devel >= 2.32.2
+BuildRequires:	gdm-devel
 BuildRequires:	gettext-tools >= 0.19.4
 BuildRequires:	glib2-devel >= 1:2.44.0
 BuildRequires:	gnome-bluetooth-devel >= 3.0
 BuildRequires:	gnome-desktop-devel >= 3.12.0
+BuildRequires:	gnome-panel-devel >= 3.35.2
 BuildRequires:	gsettings-desktop-schemas-devel >= 3.31.0
 BuildRequires:	gtk+3-devel >= 3.22.0
 BuildRequires:	ibus-devel >= 1.5.2
@@ -97,23 +99,24 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc NEWS
 %attr(755,root,root) %{_bindir}/gnome-flashback
-%attr(755,root,root) %{_libexecdir}/gnome-flashback-compiz
 %attr(755,root,root) %{_libexecdir}/gnome-flashback-metacity
+%attr(755,root,root) %{_libdir}/gnome-panel/modules/system_indicators.so
 /etc/xdg/autostart/gnome-flashback-nm-applet.desktop
-/etc/xdg/autostart/gnome-flashback-screensaver.desktop
 /etc/xdg/menus/gnome-flashback-applications.menu
 %{_desktopdir}/gnome-flashback.desktop
 %{_datadir}/desktop-directories/X-GNOME-Flashback-Settings.directory
 %{_datadir}/desktop-directories/X-GNOME-Flashback-Settings-System.directory
 %{_datadir}/glib-2.0/schemas/00_gnome-flashback.gschema.override
 %{_datadir}/glib-2.0/schemas/org.gnome.gnome-flashback.gschema.xml
-%{_datadir}/glib-2.0/schemas/org.gnome.gnome-flashback.desktop-background.gschema.xml
-%{_datadir}/glib-2.0/schemas/org.gnome.gnome-flashback.input-sources.gschema.xml
-%{_datadir}/gnome-session/sessions/gnome-flashback-compiz.session
+%{_datadir}/glib-2.0/schemas/org.gnome.gnome-flashback.desktop.background.gschema.xml
+%{_datadir}/glib-2.0/schemas/org.gnome.gnome-flashback.desktop.enums.xml
+%{_datadir}/glib-2.0/schemas/org.gnome.gnome-flashback.desktop.gschema.xml
+%{_datadir}/glib-2.0/schemas/org.gnome.gnome-flashback.desktop.icons.gschema.xml
+%{_datadir}/glib-2.0/schemas/org.gnome.gnome-flashback.system-indicators.input-sources.gschema.xml
+%{_datadir}/gnome-panel/layouts/gnome-flashback.layout
 %{_datadir}/gnome-session/sessions/gnome-flashback-metacity.session
-%{_datadir}/xsessions/gnome-flashback-compiz.desktop
 %{_datadir}/xsessions/gnome-flashback-metacity.desktop
 %{systemduserunitdir}/gnome-flashback.service
 %{systemduserunitdir}/gnome-flashback.target
-%{systemduserunitdir}/gnome-session-x11@gnome-flashback-compiz.target
 %{systemduserunitdir}/gnome-session-x11@gnome-flashback-metacity.target
+%{systemduserunitdir}/gnome-session-x11@gnome-flashback-compiz.target
