@@ -1,12 +1,12 @@
 Summary:	GNOME Flashback module - GNOME 3 shell similar to GNOME 2
 Summary(pl.UTF-8):	Moduł GNOME Flashback - powłoka GNOME 3 podobna do GNOME 2
 Name:		gnome-flashback
-Version:	3.36.4
+Version:	3.38.0
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-flashback/3.36/%{name}-%{version}.tar.xz
-# Source0-md5:	93f9cd7c9e73a988fa78377ad7999dcc
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-flashback/3.38/%{name}-%{version}.tar.xz
+# Source0-md5:	2f6d32952ef67fde2ad94ec389928a6b
 URL:		https://wiki.gnome.org/Projects/GnomeFlashback
 BuildRequires:	alsa-lib-devel
 BuildRequires:	autoconf >= 2.50
@@ -130,5 +130,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/xsessions/gnome-flashback-metacity.desktop
 %{systemduserunitdir}/gnome-flashback.service
 %{systemduserunitdir}/gnome-flashback.target
-%{systemduserunitdir}/gnome-session-x11@gnome-flashback-metacity.target
-%{systemduserunitdir}/gnome-session-x11@gnome-flashback-compiz.target
+%dir %{systemduserunitdir}/gnome-session@gnome-flashback-metacity.target.d
+%{systemduserunitdir}/gnome-session@gnome-flashback-metacity.target.d/session.conf
