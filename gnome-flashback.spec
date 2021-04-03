@@ -1,12 +1,12 @@
 Summary:	GNOME Flashback module - GNOME 3 shell similar to GNOME 2
 Summary(pl.UTF-8):	Moduł GNOME Flashback - powłoka GNOME 3 podobna do GNOME 2
 Name:		gnome-flashback
-Version:	3.38.0
+Version:	3.40.0
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-flashback/3.38/%{name}-%{version}.tar.xz
-# Source0-md5:	2f6d32952ef67fde2ad94ec389928a6b
+Source0:	https://download.gnome.org/sources/gnome-flashback/3.40/%{name}-%{version}.tar.xz
+# Source0-md5:	50f8695f36a6a907200d901d0becf0ba
 URL:		https://wiki.gnome.org/Projects/GnomeFlashback
 BuildRequires:	alsa-lib-devel
 BuildRequires:	autoconf >= 2.50
@@ -14,7 +14,7 @@ BuildRequires:	automake >= 1:1.13
 BuildRequires:	gdk-pixbuf2-devel >= 2.32.2
 BuildRequires:	gdm-devel
 BuildRequires:	gettext-tools >= 0.19.6
-BuildRequires:	glib2-devel >= 1:2.44.0
+BuildRequires:	glib2-devel >= 1:2.67.3
 BuildRequires:	gnome-bluetooth-devel >= 3.0
 BuildRequires:	gnome-desktop-devel >= 3.35.4
 BuildRequires:	gnome-panel-devel >= 3.35.2
@@ -42,9 +42,9 @@ BuildRequires:	xorg-lib-libXrandr-devel >= 1.5.0
 BuildRequires:	xorg-lib-libXxf86vm-devel >= 1.1.4
 BuildRequires:	xorg-lib-libxkbfile-devel
 BuildRequires:	xz
-Requires(post,postun):	glib2 >= 1:2.44.0
+Requires(post,postun):	glib2 >= 1:2.67.3
 Requires:	gdk-pixbuf2 >= 2.32.2
-Requires:	glib2 >= 1:2.44.0
+Requires:	glib2 >= 1:2.67.3
 Requires:	gnome-bluetooth-libs >= 3.0
 Requires:	gnome-desktop >= 3.35.4
 Requires:	gnome-panel >= 3.35.2
