@@ -1,12 +1,12 @@
 Summary:	GNOME Flashback module - GNOME 3 shell similar to GNOME 2
 Summary(pl.UTF-8):	Moduł GNOME Flashback - powłoka GNOME 3 podobna do GNOME 2
 Name:		gnome-flashback
-Version:	3.42.1
+Version:	3.44.0
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications
-Source0:	https://download.gnome.org/sources/gnome-flashback/3.42/%{name}-%{version}.tar.xz
-# Source0-md5:	78077ffc20ee5af4e47d679e6e4fad99
+Source0:	https://download.gnome.org/sources/gnome-flashback/3.44/%{name}-%{version}.tar.xz
+# Source0-md5:	a2bd88a9d3cd1bb748a552c090d41b89
 URL:		https://wiki.gnome.org/Projects/GnomeFlashback
 BuildRequires:	alsa-lib-devel
 BuildRequires:	autoconf >= 2.50
@@ -110,9 +110,11 @@ rm -rf $RPM_BUILD_ROOT
 %doc NEWS
 %attr(755,root,root) %{_bindir}/gnome-flashback
 %attr(755,root,root) %{_libexecdir}/gnome-flashback-clipboard
+%attr(755,root,root) %{_libexecdir}/gnome-flashback-media-keys
 %attr(755,root,root) %{_libexecdir}/gnome-flashback-metacity
 %attr(755,root,root) %{_libdir}/gnome-panel/modules/system_indicators.so
 /etc/xdg/autostart/gnome-flashback-clipboard.desktop
+/etc/xdg/autostart/gnome-flashback-media-keys.desktop
 /etc/xdg/autostart/gnome-flashback-nm-applet.desktop
 /etc/xdg/menus/gnome-flashback-applications.menu
 %{_desktopdir}/gnome-flashback.desktop
@@ -124,7 +126,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/glib-2.0/schemas/org.gnome.gnome-flashback.desktop.enums.xml
 %{_datadir}/glib-2.0/schemas/org.gnome.gnome-flashback.desktop.gschema.xml
 %{_datadir}/glib-2.0/schemas/org.gnome.gnome-flashback.desktop.icons.gschema.xml
+%{_datadir}/glib-2.0/schemas/org.gnome.gnome-flashback.keybindings.gschema.xml
 %{_datadir}/glib-2.0/schemas/org.gnome.gnome-flashback.system-indicators.input-sources.gschema.xml
+%{_datadir}/gnome-control-center/keybindings/50-gnome-flashback-screenshots.xml
 %{_datadir}/gnome-panel/layouts/gnome-flashback.layout
 %{_datadir}/gnome-session/sessions/gnome-flashback-metacity.session
 %{_datadir}/xsessions/gnome-flashback-metacity.desktop
