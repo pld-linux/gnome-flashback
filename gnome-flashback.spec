@@ -1,12 +1,12 @@
 Summary:	GNOME Flashback module - GNOME 3 shell similar to GNOME 2
 Summary(pl.UTF-8):	Moduł GNOME Flashback - powłoka GNOME 3 podobna do GNOME 2
 Name:		gnome-flashback
-Version:	3.44.0
-Release:	2
+Version:	3.46.0
+Release:	1
 License:	GPL v3+
 Group:		X11/Applications
-Source0:	https://download.gnome.org/sources/gnome-flashback/3.44/%{name}-%{version}.tar.xz
-# Source0-md5:	a2bd88a9d3cd1bb748a552c090d41b89
+Source0:	https://download.gnome.org/sources/gnome-flashback/3.46/%{name}-%{version}.tar.xz
+# Source0-md5:	19468cb5d882586973200697094bde23
 URL:		https://wiki.gnome.org/Projects/GnomeFlashback
 BuildRequires:	alsa-lib-devel
 BuildRequires:	autoconf >= 2.50
@@ -16,7 +16,7 @@ BuildRequires:	gdm-devel
 BuildRequires:	gettext-tools >= 0.19.6
 BuildRequires:	glib2-devel >= 1:2.67.3
 BuildRequires:	gnome-bluetooth1-devel >= 3.0
-BuildRequires:	gnome-desktop-devel >= 3.35.4
+BuildRequires:	gnome-desktop-devel >= 43
 BuildRequires:	gnome-panel-devel >= 3.35.2
 BuildRequires:	gsettings-desktop-schemas-devel >= 3.31.0
 BuildRequires:	gtk+3-devel >= 3.22.0
@@ -24,6 +24,7 @@ BuildRequires:	ibus-devel >= 1.5.2
 BuildRequires:	libcanberra-gtk3-devel >= 0.13
 # libcompizconfig >= 0.9.14.0 ?
 BuildRequires:	libtool >= 2:2
+# xcb-randr
 BuildRequires:	libxcb-devel
 BuildRequires:	pam-devel
 BuildRequires:	pango-devel >= 1:1.44.0
@@ -46,7 +47,7 @@ Requires(post,postun):	glib2 >= 1:2.67.3
 Requires:	gdk-pixbuf2 >= 2.32.2
 Requires:	glib2 >= 1:2.67.3
 Requires:	gnome-bluetooth1-libs >= 3.0
-Requires:	gnome-desktop >= 3.35.4
+Requires:	gnome-desktop >= 43
 Requires:	gnome-panel >= 3.35.2
 Requires:	gsettings-desktop-schemas >= 3.31.0
 Requires:	gtk+3 >= 3.22.0
@@ -110,10 +111,12 @@ rm -rf $RPM_BUILD_ROOT
 %doc NEWS
 %attr(755,root,root) %{_bindir}/gnome-flashback
 %attr(755,root,root) %{_libexecdir}/gnome-flashback-clipboard
+%attr(755,root,root) %{_libexecdir}/gnome-flashback-idle-monitor
 %attr(755,root,root) %{_libexecdir}/gnome-flashback-media-keys
 %attr(755,root,root) %{_libexecdir}/gnome-flashback-metacity
 %attr(755,root,root) %{_libdir}/gnome-panel/modules/system_indicators.so
 /etc/xdg/autostart/gnome-flashback-clipboard.desktop
+/etc/xdg/autostart/gnome-flashback-idle-monitor.desktop
 /etc/xdg/autostart/gnome-flashback-media-keys.desktop
 /etc/xdg/autostart/gnome-flashback-nm-applet.desktop
 /etc/xdg/menus/gnome-flashback-applications.menu
