@@ -1,16 +1,16 @@
 Summary:	GNOME Flashback module - GNOME 3 shell similar to GNOME 2
 Summary(pl.UTF-8):	Moduł GNOME Flashback - powłoka GNOME 3 podobna do GNOME 2
 Name:		gnome-flashback
-Version:	3.46.0
+Version:	3.50.0
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications
-Source0:	https://download.gnome.org/sources/gnome-flashback/3.46/%{name}-%{version}.tar.xz
-# Source0-md5:	19468cb5d882586973200697094bde23
+Source0:	https://download.gnome.org/sources/gnome-flashback/3.50/%{name}-%{version}.tar.xz
+# Source0-md5:	8f983b6c4c488bff1a9704ae67e6f66d
 URL:		https://wiki.gnome.org/Projects/GnomeFlashback
 BuildRequires:	alsa-lib-devel
 BuildRequires:	autoconf >= 2.50
-BuildRequires:	automake >= 1:1.13
+BuildRequires:	automake >= 1:1.16.4
 BuildRequires:	gdk-pixbuf2-devel >= 2.32.2
 BuildRequires:	gdm-devel
 BuildRequires:	gettext-tools >= 0.19.6
@@ -108,17 +108,19 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc NEWS
+%doc NEWS README.md
 %attr(755,root,root) %{_bindir}/gnome-flashback
 %attr(755,root,root) %{_libexecdir}/gnome-flashback-clipboard
 %attr(755,root,root) %{_libexecdir}/gnome-flashback-idle-monitor
 %attr(755,root,root) %{_libexecdir}/gnome-flashback-media-keys
 %attr(755,root,root) %{_libexecdir}/gnome-flashback-metacity
+%attr(755,root,root) %{_libexecdir}/gnome-flashback-polkit
 %attr(755,root,root) %{_libdir}/gnome-panel/modules/system_indicators.so
 /etc/xdg/autostart/gnome-flashback-clipboard.desktop
 /etc/xdg/autostart/gnome-flashback-idle-monitor.desktop
 /etc/xdg/autostart/gnome-flashback-media-keys.desktop
 /etc/xdg/autostart/gnome-flashback-nm-applet.desktop
+/etc/xdg/autostart/gnome-flashback-polkit.desktop
 /etc/xdg/menus/gnome-flashback-applications.menu
 %{_desktopdir}/gnome-flashback.desktop
 %{_datadir}/desktop-directories/X-GNOME-Flashback-Settings.directory
