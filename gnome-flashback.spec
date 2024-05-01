@@ -1,12 +1,12 @@
 Summary:	GNOME Flashback module - GNOME 3 shell similar to GNOME 2
 Summary(pl.UTF-8):	Moduł GNOME Flashback - powłoka GNOME 3 podobna do GNOME 2
 Name:		gnome-flashback
-Version:	3.50.0
+Version:	3.52.1
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications
-Source0:	https://download.gnome.org/sources/gnome-flashback/3.50/%{name}-%{version}.tar.xz
-# Source0-md5:	8f983b6c4c488bff1a9704ae67e6f66d
+Source0:	https://download.gnome.org/sources/gnome-flashback/3.52/%{name}-%{version}.tar.xz
+# Source0-md5:	a40bc6ba65aa191255808d562a2b858e
 URL:		https://wiki.gnome.org/Projects/GnomeFlashback
 BuildRequires:	alsa-lib-devel
 BuildRequires:	autoconf >= 2.50
@@ -117,12 +117,14 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libexecdir}/gnome-flashback-polkit
 %attr(755,root,root) %{_libdir}/gnome-panel/modules/system_indicators.so
 /etc/xdg/autostart/gnome-flashback-clipboard.desktop
+/etc/xdg/autostart/gnome-flashback-geoclue-demo-agent.desktop
 /etc/xdg/autostart/gnome-flashback-idle-monitor.desktop
 /etc/xdg/autostart/gnome-flashback-media-keys.desktop
 /etc/xdg/autostart/gnome-flashback-nm-applet.desktop
 /etc/xdg/autostart/gnome-flashback-polkit.desktop
 /etc/xdg/menus/gnome-flashback-applications.menu
 %{_desktopdir}/gnome-flashback.desktop
+%{_datadir}/desktop-directories/X-GNOME-Flashback-Science.directory
 %{_datadir}/desktop-directories/X-GNOME-Flashback-Settings.directory
 %{_datadir}/desktop-directories/X-GNOME-Flashback-Settings-System.directory
 %{_datadir}/glib-2.0/schemas/00_gnome-flashback.gschema.override
@@ -132,6 +134,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/glib-2.0/schemas/org.gnome.gnome-flashback.desktop.gschema.xml
 %{_datadir}/glib-2.0/schemas/org.gnome.gnome-flashback.desktop.icons.gschema.xml
 %{_datadir}/glib-2.0/schemas/org.gnome.gnome-flashback.keybindings.gschema.xml
+%{_datadir}/glib-2.0/schemas/org.gnome.gnome-flashback.notifications.gschema.xml
 %{_datadir}/glib-2.0/schemas/org.gnome.gnome-flashback.system-indicators.input-sources.gschema.xml
 %{_datadir}/gnome-control-center/keybindings/50-gnome-flashback-screenshots.xml
 %{_datadir}/gnome-panel/layouts/gnome-flashback.layout
